@@ -24,6 +24,14 @@ a {
     color: #388087;
 }
 
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color:#F6F6F2;
+}
+
 /*Navigation Bar*/
 nav {
     height: 4rem;
@@ -131,3 +139,48 @@ aside {
 }
 
 /*Projects*/
+#Projects {
+    text-align: center;
+    background-color:#C2EDCE;
+    padding: 2rem 0;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project {
+    padding: 2rem;
+    display: inline-block;
+}
+
+button {
+    background-color:#F6F6F2;
+    height: 3rem;
+    color:#388087;
+    font-weight: bold;
+    border: #388087 solid 0.25rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    background-color:#388087;
+    color:#F6F6F2;
+    border: #F6F6F2 solid 0.25rem;
+}
+
+button:active {
+    transform: translateY(4px);
+}
+
+/*Contact Me*/
+#Contact h2 {
+    text-align: center;
+}
+
+.contact-info-container {
+    display: flex;
+    justify-content: space-around;
+}
