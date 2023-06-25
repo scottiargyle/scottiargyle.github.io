@@ -70,7 +70,7 @@ main {
 .home-container {
     display: flex;
     max-width: 100%;
-    height: 55rem;
+    height: 100%;
     justify-content: space-around;
     align-items: center;
     background-color: #388087;
@@ -90,24 +90,25 @@ main {
 
 .brief-container {
     display: flex;
-    max-height: 20rem;
+    max-height: 100%;
     align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tidbit {
     background-color: #C2EDCE;
     margin: 2rem;
-    width: 20rem;
-    height: 11rem;
-    padding-top: 9rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     text-align: center;
     align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#bubble2 {
-    align-self: flex-end;
-}
 
 .home-image-container {
     display: flex;
@@ -124,7 +125,7 @@ main {
 
 /*About Me*/
 #AboutMe {
-    max-height: 42rem;
+    max-height: 50rem;
 }
 
 #AboutMe h2 {
@@ -204,6 +205,17 @@ button:active {
 }
 /*Media Queries*/
 /*Phone*/
+@media only screen and (max-width: 400px) {
+    .tidbit{
+        display: none;
+    }
+    .home-container{
+        padding-top: 2rem;
+        height: 25rem;
+        justify-content: flex-end;
+
+    }
+ }
 @media only screen and (max-width: 600px) {
     /*Universal*/
     h2 {
@@ -237,14 +249,18 @@ button:active {
     .home-container{
         flex-direction: column-reverse;
     }
-    .brief-container{
+    .home-text-container{
         flex-direction: column;
     }
+    .brief-container{
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
     .tidbit{
-        padding: 1rem;
         margin: 1rem;
-        width: 15rem;
-        max-height: 11rem;
+        width: 10rem;
+        height: 10rem;
     }
     .me {
         max-width: 15rem;
@@ -262,6 +278,122 @@ button:active {
     /*Projects*/
     .project-list {
         flex-direction: column;
+        padding: 0;
+    }
+}
+
+/*Responsive for tablets*/
+@media only screen and (min-width: 601px) and (max-width: 1023px){    
+    /*Nav bar*/
+    nav{
+        display: block;
+    }
+    #logo{
+        margin: 0;
+    }
+    .nav-bar{
+        margin: 0;
+    }
+    
+    /*Main Section*/
+    main {
+    padding-top: 2.25rem;
+    }
+    
+    /*Home*/
+    .home-container{
+        flex-direction: column-reverse;
+    }
+    .home-text-container{
+        width: 100%;
+    }
+    .brief-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tidbit{
+        margin: .75rem;
+    }
+    .me {
+        max-width: 15rem;
+        border-radius: 50%;
+        margin: 0;
+}
+    /*About Me*/
+    #AboutMe {
+        max-height: 45rem;
+    }
+    .AM-Text {
+        display: none;
+    }
+
+    .mobile-about-me {
+        display: contents;
+    }
+    /*Projects*/
+    .project-list {
+        flex-direction: wrap;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px){
+    /*Nav bar*/
+    nav{
+    }
+    #logo{
+        margin: 0;
+    }
+    .nav-bar{
+        margin: 0;
+    }
+    
+    /*Main Section*/
+    main {
+    padding-top: 2.5rem;
+    }
+    
+    /*Home*/
+    .home-container{
+        align-items:center;
+    }
+
+    .home-text-container{
+        
+        flex-wrap: wrap;
+        align-self:flex-start;
+    }
+    .brief-container{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .tidbit{
+        margin: .75rem;
+        max-width: 15rem;
+        max-height: 15rem;
+    }
+    #bubble3{
+        justify-self: center;
+    }
+    .me {
+        width: 25rem;
+        border-radius: 50%;
+        margin: 0;
+}
+    /*About Me*/
+    #AboutMe {
+        max-height: 45rem;
+    }
+    .AM-Text {
+        display: none;
+    }
+
+    .mobile-about-me {
+        display: contents;
+    }
+    /*Projects*/
+    .project-list {
+        flex-wrap: wrap;
         padding: 0;
     }
 }
