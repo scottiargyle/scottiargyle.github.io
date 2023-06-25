@@ -1,7 +1,7 @@
 let userId = document.getElementById('userinput');
 
 const getUserChoice = userInput => {
-  //userInput = userInput.toLowerCase();
+  userInput = userInput.toLowerCase();
   if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb'){
     return userInput;
   } else {
