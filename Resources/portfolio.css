@@ -69,12 +69,17 @@ main {
 /*Home*/
 .home-container {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     height: 55rem;
     justify-content: space-around;
     align-items: center;
     background-color: #388087;
     padding: 2rem;
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .home-text {
@@ -85,7 +90,7 @@ main {
 
 .brief-container {
     display: flex;
-    height: 20rem;
+    max-height: 20rem;
     align-items: flex-end;
 }
 
@@ -112,31 +117,42 @@ main {
 }
 
 .me {
-    width: 100%;
+    min-width: 75%;
+    max-width: fit-content;
     border-radius: 50%;
 }
 
 /*About Me*/
+#AboutMe {
+    max-height: 42rem;
+}
+
 #AboutMe h2 {
     text-align: center;
 }
 
 .AM-Container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 100%;
 }
 
 .AM-Text {
-    flex-basis: 55%;
     line-height: 2rem;
+    text-align: center;
+    max-width: 70%;
 }
 
 aside {
     font-family: "Petit Formal Script", sans-serif;
     text-align: center;
     font-weight: bolder;
+}
+
+.mobile-about-me {
+    display: none;
 }
 
 /*Projects*/
@@ -185,4 +201,67 @@ button:active {
     display: flex;
     justify-content: space-around;
     padding-bottom: 5rem;
+}
+/*Media Queries*/
+/*Phone*/
+@media only screen and (max-width: 600px) {
+    /*Universal*/
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p, li, div, aside {
+        font-size: 1rem;
+    }
+    
+    /*Nav bar*/
+    nav{
+        display: block;
+        max-height: 2.5rem;
+    }
+    #logo{
+        margin: 0;
+    }
+    .nav-bar {
+        visibility: hidden;
+    }
+    
+    /*Main Section*/
+    main {
+    padding-top: 2.25rem;
+    }
+    
+    /*Home*/
+    .home-container{
+        flex-direction: column-reverse;
+    }
+    .brief-container{
+        flex-direction: column;
+    }
+    .tidbit{
+        padding: 1rem;
+        margin: 1rem;
+        width: 15rem;
+        max-height: 11rem;
+    }
+    .me {
+        max-width: 15rem;
+        border-radius: 50%;
+        margin: 0;
+}
+    /*About Me*/
+    .AM-Text {
+        display: none;
+    }
+
+    .mobile-about-me {
+        display: contents;
+    }
+    /*Projects*/
+    .project-list {
+        flex-direction: column;
+        padding: 0;
+    }
 }

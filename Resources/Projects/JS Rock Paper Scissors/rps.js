@@ -5,7 +5,7 @@ const getUserChoice = userInput => {
   if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb'){
     return userInput;
   } else {
-    console.log('Error! Invalid selection!');
+    return 'Error! Invalid selection!';
   }
 }
 
@@ -50,6 +50,8 @@ const determineWinner = (userChoice, computerChoice) => {
   }
   if(userChoice==='bomb'){
     return 'Boom! You win!!'
+  } else {
+    return 'Me, Because you did not pick a valid input!'
   }
 }
 
