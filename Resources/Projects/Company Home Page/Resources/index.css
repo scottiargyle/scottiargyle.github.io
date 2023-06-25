@@ -1,0 +1,168 @@
+/*Universal Styles*/
+
+html {
+    font-size: 16px;
+    font-family: 'Signika', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: hsl(203, 6%, 73%);
+    background-color: black;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Dancing Script', cursive;
+}
+
+/*Header and Nav Bar */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: hsl(203, 6%, 73%);
+    padding: 0 0.5rem;
+    top: auto;
+    margin: 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    flex: 1;
+    float: left;
+    font-size: 2rem;
+}
+
+.navbar {
+    display: flex;
+    float: right;
+    overflow: hidden;
+}
+
+.nav {
+    padding: 1.5rem;
+
+}
+
+a:link {
+    color:hsl(203, 6%, 73%)
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+/* Main */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding-top: 3rem;
+    background-image: url(./Images/pexels-shvets-production-7973628\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    opacity: 0.85;
+}
+
+.slogan h1 {
+    font-size: 4rem;
+}
+
+.slogan div {
+    font-size: 2rem;
+}
+
+/*Menu*/
+
+#menu h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#menu h3 {
+    font-size: 2rem;
+}
+
+.menucontainer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    padding-top: 3rem;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-left: 1.5rem;
+    border: solid 0.5px;
+    margin: auto 2rem;
+}
+
+.img-container {
+    width: 25rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: auto;
+}
+
+img {
+    max-width: 25rem;
+}
+
+.feature p {
+    font-size: 1.5rem;
+}
+
+/*Locations*/
+
+.location-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.address {
+    text-align: center;
+}
+
+/*Contact Us*/
+
+#contact {
+    text-align: center;
+}
+
+#contact h4 {
+    font-size: 2rem;
+}
+
+#contact p {
+    font-size: 1.5rem;
+}
+

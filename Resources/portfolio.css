@@ -136,6 +136,7 @@ main {
 aside {
     font-family: "Petit Formal Script", sans-serif;
     text-align: center;
+    font-weight: bolder;
 }
 
 /*Projects*/
@@ -183,4 +184,5 @@ button:active {
 .contact-info-container {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 5rem;
 }
